@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
-import { PERSONS } from '../mock-persons';
+import { PersonService } from '../services/person-services/person.service';
 
 @Component({
   selector: 'app-persons',
@@ -10,23 +10,24 @@ import { PERSONS } from '../mock-persons';
 
 export class PersonsComponent implements OnInit {
 
-  // person: Person = {
-  //   id: 1,
-  //   firstname: 'Inès',
-  //   lastname: 'Beugré',
-  //   email: 'ines_beugre@yahoo.fr'
-  // }
+  persons: Person[];
+  // persons = PERSONS;
+  person: Person; //correspond à selectedPerson
 
-  persons = PERSONS;
-  person: Person;
+  constructor(private personService: PersonService) { }
 
-  constructor() { }
 
   onSelect(person: Person): void {
     this.person = person;
+     
   }
  
-  ngOnInit() {
+  getPersons(){
+    this.persons = this.personService.getPersons()
   }
 
+
+  ngOnInit() {
+    this.getPersons();
+  }
 }
