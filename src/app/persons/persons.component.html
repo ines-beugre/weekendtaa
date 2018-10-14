@@ -1,0 +1,26 @@
+<!-- affiche la liste des personnes -->
+<!-- <h2>{{person.firstname | uppercase}} Details</h2>
+<div>< span>id: </span>{{person.id}}</div>
+<div>< span>firstname: </span>{{person.firstname}}</div>
+<div>
+<label>
+   Name:
+    <input [(ngModel)]="person.firstname" placeholder="firstname">
+  </label>
+</div>
+<div>< span>lastname: </span>{{person.lastname}}</div>
+<div>< span>email: </span>{{person.email}}</div>  -->
+
+<!-- lorsqu'on veut ajouter un event select qui permet d'afficher les détails des personnes -->
+<h2> Liste des personnes </h2>
+<ul class="persons">
+  <li *ngFor="let person of persons" 
+      [class.selected]="person === selectedPerson"
+      (click)="onSelect(person)"> 
+    <span class="person_id">{{person.id}} : </span>{{person.firstname}} {{person.lastname}}
+  </li>
+  
+</ul>
+
+
+

@@ -1,0 +1,22 @@
+<!-- refers to person (ex selectedPerson) -->
+<p>
+  person-detail works!
+</p>
+
+<div *ngIf="person">
+  <h2>{{person.lastname | uppercase}} details</h2>
+  <div>
+    <span>id: </span>{{person.id}}
+  </div>
+  <div>
+    <label>
+        nom:
+        <input [(ngModel)]="person.firstname" placeholder="prénom"><br/>       
+        prénom:
+        <input [(ngModel)]="person.lastname" placeholder="nom"><br/>         
+        email:
+        <input [(ngModel)]="person.email" placeholder="email"><br/>        
+     </label>
+  </div>
+</div>
+
