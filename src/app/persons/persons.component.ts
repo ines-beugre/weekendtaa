@@ -18,12 +18,12 @@ export class PersonsComponent implements OnInit {
   // }
 
   persons = PERSONS;
-  selectedPerson: Person;
+  person: Person;
 
   constructor() { }
 
   onSelect(person: Person): void {
-    this.selectedPerson = person;
+    this.person = person;
   }
  
   ngOnInit() {
