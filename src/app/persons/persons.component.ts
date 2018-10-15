@@ -19,10 +19,10 @@ export class PersonsComponent implements OnInit {
     this.getPersons();
   }
 
-  onSelect(person: Person): void {
-    this.person = person;
+  // onSelect(person: Person): void {
+  //   this.person = person;
      
-  }
+  // }
  
   getPersons(): void {
     this.personService.getPersons()
