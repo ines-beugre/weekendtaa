@@ -14,3 +14,9 @@ Partie Routing
     ajouter un Dashboard  
     avoir la possibilité de naviguer entre les vues  
     mettre un bouton retour
+
+Partie HTTP  
+    Le PersonService aura les données avec les requêtes HHTP  
+    L'utilisateur aura la possibilité d'ajouter, modifier, supprimer et sauvegarder les modifications sur HTTP  
+    L'utilisateur pourra rechercher une personne par son nom.  
+    

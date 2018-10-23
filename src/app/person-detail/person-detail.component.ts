@@ -11,7 +11,8 @@ import { Person } from '../person';
 export class PersonDetailComponent implements OnInit {
 
 
-  @Input() person: Person
+  @Input() person: Person;
+  message: string;
   
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,23 @@ export class PersonDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.personService.getPerson(id)
       .subscribe(person => this.person = person);
+  }
+
+  updatePerson(): void {
+    this.personService.updatePerson(this.person)
+      .subscribe(person => {
+        if(person.id > 0) {
+          this.goBack();
+        }
+      })
+  }
+
+  deletePerson(): void{
+    this.personService.deletePerson(this.person.id)
+      // .subscribe(person => this.person = person)
+      .subscribe(()=> this.message = "Customer Deleted Successfully!");
+    console.log("personDelete");
+    this.goBack();
   }
 
   goBack(){

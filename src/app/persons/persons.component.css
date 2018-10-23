@@ -1,14 +1,22 @@
 .persons{
-    text-align: left;
+    text-align: center;
     color: black;
 }
-
+/* 
 span{
     font-weight: bold;
-}
+} */
 
+.persons{
+  background-color: rebeccapurple;
+  margin: 0 auto;
+  width: 30%;
+  height: 50%;
+  background-color: #ccc;
+  border-radius: 3px;
+}
 /* HeroesComponent's private CSS styles */
-  .selected {
+  /* .selected {
     background-color: #CFD8DC !important;
     color: white;
   }
@@ -54,4 +62,4 @@ span{
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
-  }
+  } */

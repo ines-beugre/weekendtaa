@@ -18,11 +18,6 @@ export class PersonsComponent implements OnInit {
   ngOnInit() {
     this.getPersons();
   }
-
-  // onSelect(person: Person): void {
-  //   this.person = person;
-     
-  // }
  
   getPersons(): void {
     this.personService.getPersons()

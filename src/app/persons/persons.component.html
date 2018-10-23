@@ -1,10 +1,13 @@
-<!-- lorsqu'on veut ajouter un event select qui permet d'afficher les détails des personnes -->
-<h2> Liste des personnes </h2>
-<ul class="persons">
-  <li *ngFor="let person of persons">
-    <a routerLink="/detail/{{person.id}}">
-      <span class="person_id">{{person.id}} : </span>{{person.firstname}} {{person.lastname}}
-    </a>
-  </li>
-  
-</ul>
+<h4> Liste des personnes </h4>
+
+<div class="persons">
+  <!-- <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">  -->
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let person of persons">
+          <a routerLink="/detail/{{person.id}}">
+            <span class="person_id">{{person.firstname}} {{person.lastname}} </span>
+          </a>
+        </li>
+    </ul>
+  <!-- </div> -->
+</div>

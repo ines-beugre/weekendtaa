@@ -1,0 +1,15 @@
+<div class="create">                
+  <form>
+      <h4>Ajouter une nouvelle personne</h4>
+      <label for="lastname" type="text">Nom</label>
+      <input [(ngModel)]="newPerson.lastname" [ngModelOptions]="{standalone: true}" placeholder="Votre nom..">
+      
+      <label for="firstname" type="text">Prénom</label>
+      <input [ngModelOptions]="{standalone: true}" [(ngModel)]="newPerson.firstname" placeholder="Votre prénom.."> 
+
+      <label for="email" type="email" >Email</label>
+      <input [ngModelOptions]="{standalone: true}" [(ngModel)]="newPerson.email" placeholder="Votre email..">
+
+      <button (click)="addPerson(newPerson)">Ajouter</button>
+  </form>
+</div>
